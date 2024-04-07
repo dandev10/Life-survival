@@ -7,6 +7,9 @@
 
 #define print printf
 
+// ooooh items!
+#include "items.h"
+
 // struct of the player!!!!!
 struct playerr
 {
@@ -46,6 +49,7 @@ void game(char YorN[2])
 
     sleep(1);
 
+
     while (gameRun)
     {
         print("player: ");
@@ -70,10 +74,11 @@ void game(char YorN[2])
         }
 
         // checks what you have around you(for example a chest)
+        /*
         else if (strcmp(player.choice, "around") == 0) {
             print("(test: a chest nearby!)\n");
         }
-
+        */
     }
 }
 
@@ -83,7 +88,7 @@ void mainMenu(char YorN[2])
 {
     int menurun = 1;
 
-    print("Welcome to Life Survival(alpha 0.4)!\n");
+    print("Welcome to Life Survival(alpha 0.5)!\n");
     sleep(1);
     while (menurun)
     {
