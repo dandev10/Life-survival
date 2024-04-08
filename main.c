@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <time.h>
 
 #define print printf
 
@@ -71,6 +72,10 @@ void game(char YorN[2])
         else if (strcmp(player.choice, "coords") == 0)
         {
             print("x%i, y%i\n", player.x, player.y);
+        }
+
+        else if (strcmp(player.choice, "info sword") == 0) {
+            print("that sword is allright");
         }
 
         // checks what you have around you(for example a chest)
