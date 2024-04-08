@@ -1,6 +1,6 @@
 # Life survial!
 
-the game is in alpha (version alpha 0.4)
+the game is in alpha (version alpha 0.5)
 
 a text based game where you be spawned in a
 castle(COOL). in the castle you find some cool things
