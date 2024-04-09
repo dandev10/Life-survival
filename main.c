@@ -9,6 +9,7 @@
 
 // ooooh items!
 #include "items.h"
+#include "enemy.h"
 
 // struct of the player!!!!!
 struct playerr
@@ -22,6 +23,7 @@ struct playerr
 struct world
 {
     char place[100];
+    // struct of the castles!!!
     struct castle
     {
         int chests;
@@ -29,7 +31,6 @@ struct world
     } castle;
 };
 
-// struct of the castles!!!
 
 // the actual game!
 void game(char YorN[2])
@@ -37,6 +38,27 @@ void game(char YorN[2])
     struct playerr player;
     // struct castle castlee;
     struct world worlde;
+
+    
+    struct Sword wooden_sword, iron_sword, titanuim_sword, legend_sword;
+    struct Armor leather_armor, iron_armor, titanuim_armor, legend_armor;
+    struct Bow wooden_bow, rare_bow, legend_bow;
+    
+    // attack of the sword
+    wooden_sword.attack = 1;
+    iron_sword.attack = 3;
+    titanuim_sword.attack = 6;
+    legend_sword.attack = 10;
+    // Item damage of the sword.
+    wooden_sword.ItemDamage = 5.0;
+    iron_sword.ItemDamage = 7.5;
+    titanuim_sword.ItemDamage = 10.0;
+    legend_sword.ItemDamage = 15.5;
+    // Text name of the sword.
+    strncpy(wooden_sword.TextName, "wooden sword", 50);
+    strncpy(iron_sword.TextName, "iron sword", 50);
+    strncpy(titanuim_sword.TextName, "titanium sword", 50);
+    strncpy(legend_sword.TextName, "legend sword", 50);
 
     int gameRun = 1;
     // i dont have yet random generation. :(
@@ -73,7 +95,15 @@ void game(char YorN[2])
             print("x%i, y%i\n", player.x, player.y);
         }
 
-        // checks what you have around you(for example a chest)
+        else if (strcmp(player.choice, "sword") == 0) {
+            if (wooden_sword.TextName) {
+                print("%s\n", wooden_sword.TextName);
+                // add more info about the sword.
+            }
+            // add other sword types.
+        }
+
+        // checks what you have around you(for example a chest) just a demo!
         /*
         else if (strcmp(player.choice, "around") == 0) {
             print("(test: a chest nearby!)\n");
@@ -88,7 +118,7 @@ void mainMenu(char YorN[2])
 {
     int menurun = 1;
 
-    print("Welcome to Life Survival(alpha 0.5)!\n");
+    print("Welcome to Life Survival(alpha 0.6)!\n");
     sleep(1);
     while (menurun)
     {
